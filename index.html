@@ -3,17 +3,116 @@
 <head>
 
 	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1"/>
+
 	<title>Weather app</title>
 	<meta name="description" content=""/>
-	<meta name="keywords" content="weather, rain, "/>
-	<meta name="author" content="Marcelina Siuda"/>
+	<meta name="keywords" content="weather, rain, sun, snow"/>
 	
-    <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1"/>
-    
+	
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	 integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div>dzień dobry</div>
+	 <!-- Loading Scr-->
+	 <section class="loadingScr">load
+		<div class = "loadingScr__box">
+			<div class="l loading__image"></div>
+		</div>
+	 </section>
+	 <!-- Left aside-->
+	 <section class="leftAside">
+		 <div class="leftAsideBox">
+			 <div class="leftAsideBox__image">
+				 <img scr="#"/>
+			</div>
+			<div class="leftAsideBox__form">
+				<div class="leftAsideBox__ChooseCity">
+					<input class="leftAsideBox__ChooseCity--input"placeholder="wybierz miasto"/>
+					<button class="leftAsideBox__ChooseCity--button">go</button>
+				</div>
+				<div class="leftAsideBox__findCity">
+					<label class="leftAsideBox__findCity--label">albo</label>
+					<button class="leftAsideBox__findCity--button">Znajdź mnie!</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--Main-->
+	<section class="main">
+		<div class="main__box1">
+			<div class="main__box1--icon">ikonka</div>
+			<header class="main__box1--header">Wrocław</header>
+			<p class="main__box1--paragraph">nie pada!</p>
+		</div>
+		<div class="main__box2">
+			<div class="main__box2--temp">45</div>
+			<div class="main__box2--minMax">
+				<p class="main__box2--minTemp">25</p>
+				<p class="main__box2--maxTemp">27</p>
+			</div>
+		</div>
+		<div class="main__box3">
+			<table>
+				<td class="main__box3--1">pressure</td>
+				<td class="main__box3--humidity">Wilgotność</td>
+				<td class="main__box3--wind">Wiatr</td>
+			</table>
+		</div>
+	</section>
 
-
-
+	 <!-- Right aside-->
+	 <section class="rightAside">
+		 <div class="rightAside__date">
+		 </div>
+		 <div class="rightAside__forcast">
+			 <ul class="rightAside__forcast--list">
+				 <li class="rightAside__forcast--listItem">czwartek
+					<span class="rightAside__forcast--date"></span>
+					<span class="rightAside__forcast--icon"></span>
+					<span class="rightAside__forcast--minMax">
+						<p>min</p>
+						<p>max</p>
+					</span>
+				 </li>
+				 <li class="rightAside__forcast--listItem">piątek
+					<span class="rightAside__forcast--date"></span>
+					<span class="rightAside__forcast--icon"></span>
+					<span class="rightAside__forcast--minMax">
+						<p>min</p>
+						<p>max</p>
+					</span>
+				 </li>
+				 <li class="rightAside__forcast--listItem">sobota
+					<span class="rightAside__forcast--date"></span>
+					<span class="rightAside__forcast--icon"></span>
+					<span class="rightAside__forcast--minMax">
+						<p>min</p>
+						<p>max</p>
+					</span>
+				 </li>
+				 <li class="rightAside__forcast--listItem">niedziela
+					<span class="rightAside__forcast--date"></span>
+					<span class="rightAside__forcast--icon"></span>
+					<span class="rightAside__forcast--minMax">
+						<p>min</p>
+						<p>max</p>
+					</span>
+				 </li>
+				 <li class="rightAside__forcast--listItem">poniedzialek
+					<span class="rightAside__forcast--date"></span>
+					<span class="rightAside__forcast--icon"></span>
+					<span class="rightAside__forcast--minMax">
+						<p>min</p>
+						<p>max</p>
+					</span>
+				 </li>
+			 </ul>
+		 </div>
+	 </section>
 </body>
+</html>
