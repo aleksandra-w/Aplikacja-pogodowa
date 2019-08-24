@@ -1,0 +1,11 @@
+body {
+  background: CornflowerBlue;
+  color: white;
+}
+
+.rightAside {
+  background-color: pink;
+  &__forcast--listItem {
+    color: gray;
+  }
+}

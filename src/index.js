@@ -1,4 +1,4 @@
-import "./css/style.css";
+import "./scss/scssStyle.scss";
 
 import getApiData from "./js/apiData";
 
