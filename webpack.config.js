@@ -23,12 +23,16 @@ module.exports = {
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: "file-loader?name=[name].[ext]&outputPath=./images/"
       }
     ]
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template:  "./src/index.html",
+      template: "./src/index.html",
       filename: "./index.html"
     }),
     new MiniCssExtractPlugin({
