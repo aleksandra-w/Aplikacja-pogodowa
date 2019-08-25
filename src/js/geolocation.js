@@ -68,7 +68,7 @@ async function getWeather(){
   await getCity();
   divWeather.innerHTML = `
     the weather in ${myRes.name} is: ${myRes.weather[0].main},
-    temp: ${Math.round(myRes.main.temp-273,3)} C,
+    temp: ${Math.round(myRes.main.temp-273.15)} C,
     wind: ${myRes.wind.speed},
     clouds: ${myRes.clouds.all}`;
 };
