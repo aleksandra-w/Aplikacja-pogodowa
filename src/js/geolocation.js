@@ -50,7 +50,7 @@ function error(err) {
 getLocation();
 
 // Get city from input
-async function getCity (){
+async function getCity(){
   inputCity = document.querySelector('.leftAsideBox__ChooseCity--input').value;
   let url = `http://api.openweathermap.org/data/2.5/weather?q=${inputCity}&APPID=307b855de38a960270e1caa9d305240a`;
   await fetch(url)
