@@ -1,28 +1,17 @@
-<svg width="174" height="174" viewBox="0 0 174 174" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d)">
-<g filter="url(#filter1_i)">
-<path d="M87 111.469V119.625" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path d="M69.698 104.302L63.9306 110.069" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path d="M62.5312 87H54.375" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path d="M69.698 69.698L63.9306 63.9306" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path d="M87 62.5312V54.375" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path d="M104.302 69.698L110.069 63.9306" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path d="M111.469 87H119.625" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path d="M104.302 104.302L110.069 110.069" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path d="M87 100.594C94.5076 100.594 100.594 94.5076 100.594 87C100.594 79.4924 94.5076 73.4062 87 73.4062C79.4924 73.4062 73.4062 79.4924 73.4062 87C73.4062 94.5076 79.4924 100.594 87 100.594Z" fill="white" stroke="white" stroke-width="2"/>
-</g>
+<svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_i)">
+<path d="M34 58.4688V66.625" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M16.698 51.302L10.9306 57.0694" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M9.53125 34H1.375" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M16.698 16.698L10.9306 10.9306" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M34 9.53125V1.375" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M51.3021 16.698L57.0694 10.9306" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M58.4688 34H66.625" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M51.3021 51.302L57.0694 57.0694" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M34 47.5938C41.5076 47.5938 47.5938 41.5076 47.5938 34C47.5938 26.4924 41.5076 20.4062 34 20.4062C26.4924 20.4062 20.4062 26.4924 20.4062 34C20.4062 41.5076 26.4924 47.5938 34 47.5938Z" fill="white" stroke="white" stroke-width="2"/>
 </g>
 <defs>
-<filter id="filter0_d" x="-4" y="0" width="182" height="182" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="2"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-</filter>
-<filter id="filter1_i" x="53.375" y="53.375" width="67.25" height="71.25" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_i" x="0.375" y="0.375" width="67.25" height="71.25" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
