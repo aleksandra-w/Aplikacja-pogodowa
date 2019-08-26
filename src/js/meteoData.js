@@ -29,15 +29,17 @@ class meteoObject{
 }
 
  async function getMeteoData(cityName){
-    const currentWeatherObject = await toDataObject(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=70e6060b22d5d79f05a17ef7fadfdbda`); 
-    const forecastWeatherObject = await toDataObject(`http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=70e6060b22d5d79f05a17ef7fadfdbda`);
+    const currentWeatherObject = await apiDataToObject(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=70e6060b22d5d79f05a17ef7fadfdbda`); 
+    const forecastWeatherObject = await apiDataToObject(`http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=70e6060b22d5d79f05a17ef7fadfdbda`);
 
     const resultArray = [];
-    const dateTime  = todayDate();
+    const dateTime  = getTodaysDate();
 
-    const meteo = new meteoObject(dateTime, Math.floor(currentWeatherObject.main.temp), Math.floor(currentWeatherObject.main.temp_min), 
-      Math.floor(currentWeatherObject.main.temp_max), currentWeatherObject.weather[0].main, currentWeatherObject.weather[0].description, 
-      currentWeatherObject.weather[0].icon, currentWeatherObject.wind.speed, currentWeatherObject.main.pressure, currentWeatherObject.main.humidity);
+    const { temp, temp_min, temp_max, pressure, humidity } = currentWeatherObject.main;
+    const { main, descirption, icon } = currentWeatherObject.weather[0];
+    const { speed } = currentWeatherObject.wind;
+
+    const meteo = new meteoObject(dateTime, Math.floor(temp), Math.floor(temp_min), Math.floor(temp_max), main, description, icon, speed, pressure, humidity);
 
     resultArray.push(meteo);
     const dividedArray = divideArray(forecastWeatherObject.list);
@@ -48,9 +50,8 @@ class meteoObject{
     return resultArray;
   }
 
-  //funkcja pobiera dane z api i zamienia w obiekt 
 
-  async function toDataObject(fetchLink){
+  async function apiDataToObject(fetchLink){
     const fetchedData = await fetch(fetchLink); //pobieranie danych z API
     const stringData = await fetchedData.text(); //konwersja pobranych danych w obiekt zapisany w postaci stringa
     const dataObject = JSON.parse(stringData); //konwersja obiektu zapisanego w postaci stringa w prawdziwy obiekt
@@ -58,9 +59,7 @@ class meteoObject{
     return dataObject;
   }
 
-  //todayDate zwraca obecna date
-
-  function todayDate(){ 
+  function getTodaysDate(){ 
     const today = new Date();
     const date = today.getFullYear() + '-' + (today.getMonth()+1) + '-' + today.getDate();
     const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
@@ -76,24 +75,24 @@ class meteoObject{
     let dayArray = [];
     const dividedArray = [];
   
-    let data1 = new Date(meteoArr[0].dt_txt);
-    data1 = data1.getDay();
+    let firstDate = new Date(meteoArr[0].dt_txt);
+    firstDate = firstDate.getDay();
     dayArray.push(meteoArr[0])
 
-    for(let i = 1; i < meteoArr.length; i++){//for w tym miejscu ponieważ zaczynam od drugiego elementu, a z tego co kojarzę wszystkie iteratory obejmują wszystkie elementy
-        let data2 = new Date(meteoArr[i].dt_txt);
-        data2 = data2.getDay();
-        if(data1 == data2){
-            dayArray.push(meteoArr[i])
+    meteoArr.forEach((elem) =>{
+        let secondDate = new Date(elem.dt_txt);
+        secondDate = secondDate.getDay();
+        if(firstDate == secondDate){
+            dayArray.push(elem)
         }
         else {
             dividedArray.push(dayArray);
             dayArray = [];
-            dayArray.push(meteoArr[i]);
+            dayArray.push(elem);
         }
-        data1 = data2;
+        firstDate = secondDate;
   
-    }
+    });
 
     dividedArray.push(dayArray);
     return dividedArray;
@@ -142,7 +141,7 @@ class meteoObject{
   /*mostCommonInArray - szuka najczestszych wystapien w tablicy, wykorzystuje to przy np. weather, jako że prognozy są co 3 godziny często się to pole zmienia
     dlatego szukam jaka wartość pojawiała się najczęściej
   */
- 
+
   function mostCommonInArray(array){
     const arrayCopy = [...array];
     arrayCopy.sort();
