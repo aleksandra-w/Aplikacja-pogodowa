@@ -13,6 +13,17 @@ Webpack pozwoli nam stworzyć wersję produkcyjną naszej aplikacji.
 - wpisujemy polecenie: `npm run build`
   i naciskamy enter żeby zbudować projekt
 - wpisujemy polecenie: `npm run dev` i naciskamy enter żeby odpalić serwer developerski
-  dzięki temu możemy wprowadzać zmiany w kodzie a strona będzie automatycznie je pokazywać z przeglądarce po zapisaniu.
+  dzięki temu możemy wprowadzać zmiany w kodzie a strona będzie automatycznie je pokazywać w przeglądarce po zapisaniu.
 
-PÓŻNIEJ NAPISZE WIĘCEJ.... 😸
+## Struktura katalogów scss
+
+Gdzie i co pakować:
+
+- **Base**: animacje, style podstawowe, typografia, utiliesy i takie tam.
+- **Components**: po jednym pliku scss dla komponentu
+- **Pages**: po jednym pliku scss dla strony
+- **Abstracts**: funkcje, mixiny, zmienne
+
+Wszytskie pliki importujemy w `main.scss`, ktory siedzi w głównym katalogu 💅
+
+PÓŻNIEJ NAPISZE WIĘCEJ.... 😸 wszelkie pomysły i sugestie mile widziane 
