@@ -25,7 +25,7 @@ body{
     animation: fadeOut 1s;
     animation-fill-mode: forwards;
 }
-.bar {
+.loading--bar {
     display: flex;
     align-items: center;
     width: 88px;
@@ -34,7 +34,7 @@ body{
     border-radius: 10px;
     overflow: hidden;
 }
-.bar__status {
+.loading--bar__status {
     width: 95%;
     height: 100%;
     background-color: white;
