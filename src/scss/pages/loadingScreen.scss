@@ -1,14 +1,6 @@
-* {
-    box-sizing: border-box;
-}
-body {
-    width: 100vh;
-    height: 100vh;
-    background: linear-gradient(180deg, #002947 0%, rgba(56, 144, 207, 0.79) 100%);
-}
 .loadingScreen {
     position: fixed;
-    z-index: 99; //liczba 99 jest to magiczna liczba. Ponadto liczba 99 odnosi się do atrybutów i energii komunikacji, wewnętrznej siły, przywództwa i wiodącej pozytywnego przykładu, bezinteresowności, wyższej perspektywy, intuicji i wewnętrznej mądrości, humanitaryzmu i altruizmu, duchowego przebudzenia i oświecenia, służenia innym, to Duchowe Prawa i cel Twojego Boskiego życia tutaj i teraz. To również zakończenie pewnych spraw, sytuacji i przywitanie nowych.
+    z-index: 2;
     top: 0;
     left: 0;
     width: 100%;
@@ -34,7 +26,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
 }
-.loading__bar--status {
+.loading__bar__status {
     width: 95%;
     height: 100%;
     background-color: white;
