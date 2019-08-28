@@ -35,13 +35,13 @@
             <img scr="#" />
           </div>
           <div class="leftAsideBox__form">
-            <div class="leftAsideBox__ChooseCity">
+            <form method = "post" enctype="text/plain" class="leftAsideBox__ChooseCity">
               <input
-                class="leftAsideBox__ChooseCity--input"
-                placeholder="wybierz miasto"
+                type = "text" class="leftAsideBox__ChooseCity--input"
+                id="autocomplete" placeholder="wybierz miasto" 
               />
               <button class="leftAsideBox__ChooseCity--button">go</button>
-            </div>
+            </form>
             <div class="leftAsideBox__findCity">
               <label class="leftAsideBox__findCity--label">albo</label>
               <button class="leftAsideBox__findCity--button">
@@ -128,5 +128,7 @@
         </div>
       </section>
     </div>
+    <script type ="text/javascript" src="js/townSearcher.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj8XTWdBJxVeK_i_sgWREHXanPNGbN90c&libraries=places&callback=citySuggestions"></script>
   </body>
 </html>
