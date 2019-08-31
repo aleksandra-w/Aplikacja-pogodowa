@@ -6,5 +6,7 @@ function citySuggestions () {
        };
 
     const input = document.getElementById('autocomplete');
-    const autocomplete = new google.maps.places.Autocomplete(input, options);
+    new google.maps.places.Autocomplete(input, options);
 }
+
+google.maps.event.addDomListener(window, 'load', citySuggestions);
