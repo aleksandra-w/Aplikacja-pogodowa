@@ -1,5 +1,13 @@
 import "./scss/main.scss";
 
-import getApiData from "./js/apiData";
+import "./js/townSearcher"
+import "./js/loadingScreen"
 
-getApiData();
+import getMeteoData from "./js/meteoData"
+
+const getMeteoDataTest = async () => {
+    const weather = await getMeteoData("Warszawa")
+    console.log(weather)
+}
+
+getMeteoDataTest()
