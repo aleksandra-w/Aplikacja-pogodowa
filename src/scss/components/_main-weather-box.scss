@@ -25,4 +25,22 @@
       padding: 1rem;
     }
   }
+  &__box3{
+    display: flex;
+    justify-content: stretch;
+    min-height: 3rem;
+    div {
+      flex: 1;
+      text-align: center;
+      border-left: 1px solid $color-white-transparent;
+      span{
+        display: block;
+        font-weight: 400;
+        line-height: 3rem;
+      }
+    }
+    &:last-child {
+      border-right: 1px solid $color-white-transparent;
+    }
+  }
 }
