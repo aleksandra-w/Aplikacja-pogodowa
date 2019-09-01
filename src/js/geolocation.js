@@ -18,47 +18,37 @@ function getLocation() {
   }
 };
 
-async function showPosition(position) {
+function showPosition(position) {
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
   const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=307b855de38a960270e1caa9d305240a`;
-  await fetch(url)
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(response) {
-    result=JSON.stringify(response);
-    myRes=JSON.parse(result);
-  });
-  divPos.innerHTML = `Your location: ${myRes.name}<br>
-  Latitude: ${lat}<br>
-  Longitude: ${lon}`;
-  divWeather.innerHTML = `
-    the weather in ${myRes.name} is: ${myRes.weather[0].main},
-    temp: ${Math.round(myRes.main.temp-273,3)} C,
-    wind: ${myRes.wind.speed},
-    clouds: ${myRes.clouds.all}`;  
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      myRes=data;
+      divPos.innerHTML = `Your location: ${myRes.name}<br>
+      Latitude: ${lat}<br>
+      Longitude: ${lon}`;
+      divWeather.innerHTML = `
+      the weather in ${myRes.name} is: ${myRes.weather[0].main},
+      temp: ${Math.round(myRes.main.temp-273,3)} C,
+      wind: ${myRes.wind.speed},
+      clouds: ${myRes.clouds.all}`;
+    })
 };
 
 function error(err) {
   console.warn(`ERROR(${err.code}): ${err.message}`);
+  divPos.innerHTML = `ERROR(${err.code}): ${err.message}`;
 };
 
 // Get city from input
 async function getCity(){
   const inputCity = document.querySelector('.leftAsideBox__ChooseCity--input').value;
-  console.log(inputCity);
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${inputCity}&APPID=307b855de38a960270e1caa9d305240a`;
-  console.log(url)
-  await fetch(url)
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(response) {
-    result=JSON.stringify(response);
-    myRes=JSON.parse(result);
-    console.log(myRes);
-  });
+  const response = await fetch(url);
+  const result = await response.json();
+  myRes=result;
 };
 
 // Get weather for city from input
