@@ -1,9 +1,11 @@
 const btnPos = document
-    .querySelector('.leftAsideBox__findCity--button')
+    .querySelector(".leftAsideBox__findCity--button")
     .addEventListener('click', getLocation);
 const btnWeather = document
-    .querySelector('.leftAsideBox__ChooseCity--button')
+    .querySelector(".leftAsideBox__ChooseCity--button")
     .addEventListener('click', getWeather);
+// Prevent form submit
+document.querySelector(".leftAsideBox__ChooseCity--button").addEventListener('click',(event)=>event.preventDefault());
 const divPos = document.querySelector(".main__box1--header");
 const divWeather = document.querySelector(".main__box1--paragraph");
 
@@ -26,14 +28,14 @@ function showPosition(position) {
     .then(response => response.json())
     .then(data => {
       myRes=data;
-      divPos.innerHTML = `Your location: ${myRes.name}<br>
+      divPos.innerHTML =`Twoje miasto: ${myRes.name}<br>
       Latitude: ${lat}<br>
       Longitude: ${lon}`;
       divWeather.innerHTML = `
-      the weather in ${myRes.name} is: ${myRes.weather[0].main},
-      temp: ${Math.round(myRes.main.temp-273,3)} C,
+      The weather in ${myRes.name} is: ${myRes.weather[0].main},`
+      /*temp: ${Math.round(myRes.main.temp-273,3)} C,
       wind: ${myRes.wind.speed},
-      clouds: ${myRes.clouds.all}`;
+      clouds: ${myRes.clouds.all}`;*/
     })
 };
 
@@ -55,10 +57,10 @@ async function getCity(){
 async function getWeather(){
   await getCity();
   divWeather.innerHTML = `
-    the weather in ${myRes.name} is: ${myRes.weather[0].main},
+    The weather in ${myRes.name} is: ${myRes.weather[0].main}`/*,
     temp: ${Math.round(myRes.main.temp-273.15)} C,
     wind: ${myRes.wind.speed},
-    clouds: ${myRes.clouds.all}`;
+    clouds: ${myRes.clouds.all}`*/;
 };
 
 getLocation();
