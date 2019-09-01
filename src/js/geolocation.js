@@ -29,13 +29,10 @@ function showPosition(position) {
     .then(data => {
       myRes=data;
       divPos.innerHTML =`Twoje miasto: ${myRes.name}<br>
-      Latitude: ${lat}<br>
-      Longitude: ${lon}`;
+      Szerokość geograficzna (Latitude): ${lat}<br>
+      Długość geograficzna (Longitude): ${lon}`;
       divWeather.innerHTML = `
-      The weather in ${myRes.name} is: ${myRes.weather[0].main},`
-      /*temp: ${Math.round(myRes.main.temp-273,3)} C,
-      wind: ${myRes.wind.speed},
-      clouds: ${myRes.clouds.all}`;*/
+      The weather in ${myRes.name} is: ${myRes.weather[0].main}`
     })
 };
 
@@ -57,10 +54,7 @@ async function getCity(){
 async function getWeather(){
   await getCity();
   divWeather.innerHTML = `
-    The weather in ${myRes.name} is: ${myRes.weather[0].main}`/*,
-    temp: ${Math.round(myRes.main.temp-273.15)} C,
-    wind: ${myRes.wind.speed},
-    clouds: ${myRes.clouds.all}`*/;
+    The weather in ${myRes.name} is: ${myRes.weather[0].main}`;
 };
 
 getLocation();
