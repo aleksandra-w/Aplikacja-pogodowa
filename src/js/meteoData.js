@@ -36,7 +36,7 @@ class meteoObject{
     const dateTime  = getTodaysDate();
 
     const { temp, temp_min, temp_max, pressure, humidity } = currentWeatherObject.main;
-    const { main, descirption, icon } = currentWeatherObject.weather[0];
+    const { main, description, icon } = currentWeatherObject.weather[0];
     const { speed } = currentWeatherObject.wind;
 
     const meteo = new meteoObject(dateTime, Math.floor(temp), Math.floor(temp_min), Math.floor(temp_max), main, description, icon, speed, pressure, humidity);
