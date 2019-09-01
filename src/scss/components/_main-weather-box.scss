@@ -1,0 +1,28 @@
+.main {
+  //   margin: auto;
+  text-align: center;
+  align-self: center;
+  &__box1 {
+    position: relative;
+    margin-bottom: 2rem;
+    &--icon {
+      background: url("./../icons/cloudy-day-2.svg") no-repeat center center /
+        contain;
+      position: absolute;
+      right: -25%;
+      top: -40%;
+      height: 11rem;
+      width: 11rem;
+    }
+    &--paragraph {
+      font-size: 1.9rem;
+    }
+  }
+  &__box2 {
+    display: flex;
+    align-items: center;
+    div {
+      padding: 1rem;
+    }
+  }
+}
