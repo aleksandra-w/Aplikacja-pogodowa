@@ -7,9 +7,6 @@ const btnWeather = document
 const divPos = document.querySelector(".main__box1--header");
 const divWeather = document.querySelector(".main__box1--paragraph");
 
-let inputCity;
-let lat;
-let lon;
 let myRes;
 
 // Get location of navigator
@@ -22,9 +19,9 @@ function getLocation() {
 };
 
 async function showPosition(position) {
-  lat = position.coords.latitude;
-  lon = position.coords.longitude;
-  let url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=307b855de38a960270e1caa9d305240a`;
+  const lat = position.coords.latitude;
+  const lon = position.coords.longitude;
+  const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=307b855de38a960270e1caa9d305240a`;
   await fetch(url)
   .then(function(response) {
     return response.json();
@@ -47,12 +44,12 @@ function error(err) {
   console.warn(`ERROR(${err.code}): ${err.message}`);
 };
 
-getLocation();
-
 // Get city from input
 async function getCity(){
-  inputCity = document.querySelector('.leftAsideBox__ChooseCity--input').value;
-  let url = `http://api.openweathermap.org/data/2.5/weather?q=${inputCity}&APPID=307b855de38a960270e1caa9d305240a`;
+  const inputCity = document.querySelector('.leftAsideBox__ChooseCity--input').value;
+  console.log(inputCity);
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${inputCity}&APPID=307b855de38a960270e1caa9d305240a`;
+  console.log(url)
   await fetch(url)
   .then(function(response) {
     return response.json();
@@ -60,6 +57,7 @@ async function getCity(){
   .then(function(response) {
     result=JSON.stringify(response);
     myRes=JSON.parse(result);
+    console.log(myRes);
   });
 };
 
@@ -73,3 +71,4 @@ async function getWeather(){
     clouds: ${myRes.clouds.all}`;
 };
 
+getLocation();
