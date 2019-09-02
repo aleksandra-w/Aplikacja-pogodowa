@@ -1,0 +1,13 @@
+#weather-sections-wrapper {
+    height: 100%;
+    width: 100%;
+    animation: fadeIn 2s ease-in, roolIn 1.5s ease-in;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }    
+    100% { opacity: 1; }
+}
+@keyframes roolIn {
+    0% { transform: translateY(-100%) }    
+    100% { transform:  translateY(0) }
+}
