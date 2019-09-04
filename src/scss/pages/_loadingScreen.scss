@@ -1,4 +1,4 @@
-.loadingScreen {
+.loading {
     position: fixed;
     z-index: 2;
     top: 0;
@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
 }
-.loadingScreen__image {
+.loading__image {
     margin: 1em;
 }
 .hidden {
@@ -22,14 +22,14 @@
     align-items: center;
     width: 88px;
     height: 8px;
-    background-color: blue;
+    background-color: $color-white;
     border-radius: 10px;
     overflow: hidden;
 }
-.loading__bar__status {
+.loading__bar--status {
     width: 95%;
     height: 100%;
-    background-color: white;
+    background-color: rgba(0, 60, 103, 0.24);
     border-radius: 10px;
     animation: load 2s infinite linear;
 }
