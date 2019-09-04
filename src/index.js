@@ -1,4 +1,7 @@
-import "./scss/main.scss";
-
+import "./scss/main.scss"
 import "./js/townSearcher"
 import "./js/loadingScreen"
+import "./js/errorHandling"
+import {checkStatus} from "./js/errorHandling"
+
+checkStatus();
