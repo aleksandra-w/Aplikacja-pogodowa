@@ -1,7 +1,7 @@
 .main {
-  //   margin: auto;
   text-align: center;
   align-self: center;
+
   &__box1 {
     position: relative;
     margin-bottom: 2rem;
@@ -18,11 +18,30 @@
       font-size: 1.9rem;
     }
   }
+
   &__box2 {
     display: flex;
     align-items: center;
     div {
       padding: 1rem;
+    }
+  }
+
+  &__box3{
+    display: flex;
+    justify-content: stretch;
+    .weather-info {
+      flex: 1;
+      text-align: center;
+      border-left: 1px solid $color-white-transparent;
+      line-height: 3rem;
+      &--bold {
+        display: block;
+        font-weight: 400;
+      }
+      &:last-child {
+        border-right: 1px solid $color-white-transparent;
+      }
     }
   }
 }
