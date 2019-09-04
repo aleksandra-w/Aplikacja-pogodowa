@@ -1,0 +1,35 @@
+.rightAside {
+    margin: $main-margin;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+
+    &__date {
+        font-size: 2.8rem;
+        margin-bottom: 5rem;
+        text-align: center;
+    }
+
+    &__forcast {
+        background-color: $color-white-transparent;
+        flex: 1;
+        &--list{
+            display: flex;
+            justify-content: stretch;
+            flex-direction: column;
+            height: 100%;
+            list-style-type: none;
+            &:last-child{
+                border-bottom: 1px solid $color-white-transparent;
+            }
+        }
+
+        &--listItem{
+            flex: 1;
+            border: 1px solid $color-white-transparent;
+            border-bottom: none;
+            padding: 1rem;
+        }
+    }
+}
