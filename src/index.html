@@ -16,8 +16,8 @@
   </head>
   <body>
     <!-- Loading Scr-->
-    <div class="loadingScreen">
-      <img class="loadingScreen__image" src="./icons/logo.svg" alt="logo">
+    <div class="loading">
+      <img class="loading__image" src="./icons/logo.svg" alt="logo">
       <div class="loading__bar">
           <div class="loading__bar--status"></div>
       </div>
@@ -50,9 +50,10 @@
       <section class="main">
         <div class="main__box1">
           <div class="main__box1--icon"></div>
-          <header class="main__box1--header header">Wrocław</header>
+          <header class="main__box1--header header">Twoje miasto</header>
           <p class="main__box1--paragraph">nie pada!</p>
         </div>
+        <script async src="js/geolocation.js"></script>
         <div class="main__box2">
           <div class="main__box2--temp header">45&deg;C</div>
           <div class="main__box2--minMax">
@@ -61,15 +62,15 @@
           </div>
         </div>
         <div class="main__box3">
-          <div class="main__box3--pressure">Ciśnienie</div>
-          <div class="main__box3--humidity">Wilgotność</div>
-          <div class="main__box3--wind">Wiatr</div>
+          <div class="main__box3--pressure weather-info">Ciśnienie<span class="weather-info--bold">1016 hPa</span></div>
+          <div class="main__box3--humidity weather-info">Wilgotność<span class="weather-info--bold">54%</span></div>
+          <div class="main__box3--wind weather-info">Wiatr<span class="weather-info--bold">18 km/h</span></div>
         </div>
       </section>
 
       <!-- Right aside-->
       <section class="rightAside">
-        <div class="rightAside__date"></div>
+        <div class="rightAside__date">środa, 14 lipca 2019 12:54</div>
         <div class="rightAside__forcast">
           <ul class="rightAside__forcast--list">
             <li class="rightAside__forcast--listItem">
