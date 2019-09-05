@@ -15,8 +15,15 @@ let myRes;
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition, error);
+    const node = main.firstElementChild
+    main.removeChild(node);
   } else { 
-    divPos.innerHTML = "Geolocation is not supported by this browser.";
+    const node = document.createElement("div");
+    const textnode = document.createTextNode("geolokalizacja niedostępna");
+    const child = document.querySelector(".main__box1"); 
+    node.classList.add("no-connection") 
+    node.appendChild(textnode);                        
+    main.insertBefore(node, child); 
   }
 };
 
