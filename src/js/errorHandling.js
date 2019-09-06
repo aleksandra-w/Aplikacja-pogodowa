@@ -1,6 +1,6 @@
 // sprawdzanie połączenia z internetem
 const main = document.querySelector(".main");
-const ifoffline = () => {
+const ifOffline = () => {
     if(!navigator.onLine) {
         const node = document.createElement("div");
         const textnode = document.createTextNode("brak dostępu do sieci");
@@ -10,7 +10,7 @@ const ifoffline = () => {
         main.insertBefore(node, child); 
     }
 }     
-ifoffline(); //wywołuję tą funkcję tylko raz na początku aby sprawdzić czy jest offline aby dodać powiadomienie. W mojej przeglądarce listener nie obsługiwał tego na początku.
+ifOffline(); //wywołuję tą funkcję tylko raz na początku aby sprawdzić czy jest offline aby dodać powiadomienie. W mojej przeglądarce listener nie obsługiwał tego na początku.
 const ifonline = (() => {
     window.addEventListener("online",() => {
         const node = main.firstElementChild
