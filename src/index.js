@@ -1,5 +1,5 @@
-import "./scss/main.scss";
-
+import "./scss/main.scss"
 import "./js/townSearcher"
 import "./js/loadingScreen"
-import "./js/geolocation";
+import "./js/errorHandling"
+import "./js/geolocation"

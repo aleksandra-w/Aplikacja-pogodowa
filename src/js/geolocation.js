@@ -16,7 +16,13 @@ function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition, error);
   } else { 
-    divPos.innerHTML = "Geolocation is not supported by this browser.";
+    const main = document.querySelector(".main");
+    const node = document.createElement("div");
+    const textnode = document.createTextNode("Geolocation is not supported by this browser.");
+    const child = document.querySelector(".main__box1"); 
+    node.classList.add("no-connection") 
+    node.appendChild(textnode);                        
+    main.insertBefore(node, child);
   }
 };
 
@@ -38,7 +44,13 @@ function showPosition(position) {
 
 function error(err) {
   console.warn(`ERROR(${err.code}): ${err.message}`);
-  divPos.innerHTML = `ERROR(${err.code}): ${err.message}`;
+    const main = document.querySelector(".main");
+    const node = document.createElement("div");
+    const textnode = document.createTextNode("geolokalizacja niedostępna");
+    const child = document.querySelector(".main__box1"); 
+    node.classList.add("no-connection") 
+    node.appendChild(textnode);                        
+    main.insertBefore(node, child); 
 };
 
 // Get city from input
