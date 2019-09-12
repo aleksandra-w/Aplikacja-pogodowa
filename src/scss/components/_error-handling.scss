@@ -2,10 +2,17 @@
     position: absolute;
     width: 20em;
     height: 2rem;
-    top: 10%;
+    top: 15%;
     text-align: center;
     color: #002947;
     background-color: #FFFFFF;
     border: 1px solid rgba(255, 255, 255, 0.24);
     border-radius: 5px;
+    @include respons(tablet) {
+        top: -30%;
+      }
+}
+.redAlert {
+    color: rgb(255, 0, 0);
+    font-size: 1.4rem;
 }

@@ -3,9 +3,15 @@ body {
   font-weight: 300;
   font-size: 1.6rem;
   color: $color-white;
+  @include respons(phone) {
+    font-size: 1.3rem;
+  }
 }
 
 .header {
   font-size: 7rem;
   text-shadow: 0px 0.4rem 0.4rem $color-transparent-black;
+  @include respons(phone) {
+    font-size: 4rem;
+  }
 }

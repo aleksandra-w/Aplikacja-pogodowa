@@ -29,8 +29,8 @@ class meteoObject{
 }
 
  async function getMeteoData(cityName){
-    const currentWeatherObject = await apiDataToObject(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=70e6060b22d5d79f05a17ef7fadfdbda`); 
-    const forecastWeatherObject = await apiDataToObject(`http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=70e6060b22d5d79f05a17ef7fadfdbda`);
+    const currentWeatherObject = await apiDataToObject(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=70e6060b22d5d79f05a17ef7fadfdbda`); 
+    const forecastWeatherObject = await apiDataToObject(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=70e6060b22d5d79f05a17ef7fadfdbda`);
 
     const resultArray = [];
     const dateTime  = getTodaysDate();

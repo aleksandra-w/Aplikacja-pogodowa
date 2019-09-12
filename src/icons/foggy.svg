@@ -1,0 +1,32 @@
+<svg width="72" height="64" viewBox="0 0 72 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)" filter="url(#filter0_di)">
+<path d="M38.0001 36H5.99999C4.89455 36 4 35.1055 4 34C4 32.8946 4.89455 32.0001 5.99999 32.0001H38.0001C39.1055 32.0001 40 32.8946 40 34C40 35.1055 39.1055 36 38.0001 36V36Z" fill="white"/>
+<path d="M18 48.0001H5.99999C4.89455 48.0001 4 47.1056 4 46C4 44.8944 4.89455 44 5.99999 44H18C19.1055 44 20 44.8945 20 46C20 47.1054 19.1055 48.0001 18 48.0001Z" fill="white"/>
+<path d="M67.3521 45.3519H47.352C46.2466 45.3519 45.3521 44.4573 45.3521 43.3519C45.3521 42.2465 46.2466 41.3519 47.352 41.3519H67.3521C68.4575 41.3519 69.3521 42.2465 69.3521 43.3519C69.3521 44.4573 68.4576 45.3519 67.3521 45.3519V45.3519Z" fill="white"/>
+<path d="M66 56H26C24.8945 56 24 55.1055 24 54.0001C24 52.8946 24.8945 52.0001 26 52.0001H66C67.1055 52.0001 68 52.8946 68 54.0001C68 55.1055 67.1056 56 66 56Z" fill="white"/>
+<path d="M61.9999 16H34C32.8945 16 32 15.1055 32 14C32 12.8946 32.8945 12 34 12H62.0001C63.1055 12 64.0001 12.8946 64.0001 14C64.0001 15.1055 63.1054 16 61.9999 16V16Z" fill="white"/>
+<path d="M26 12.2704H5.99999C4.89455 12.2704 4 11.3759 4 10.2704C4 9.16501 4.89455 8.27046 5.99999 8.27046H26C27.1054 8.27046 28 9.16501 28 10.2704C28 11.3759 27.1054 12.2704 26 12.2704Z" fill="white"/>
+<path d="M30 24.6759H5.99999C4.89455 24.6759 4 23.7814 4 22.6759C4 21.5705 4.89455 20.6759 5.99999 20.6759H30C31.1054 20.6759 32 21.5705 32 22.6759C32.0001 23.7814 31.1055 24.6759 30 24.6759Z" fill="white"/>
+<path d="M67.2168 28.8112H43.2168C42.1113 28.8112 41.2168 27.9167 41.2168 26.8112C41.2168 25.7058 42.1113 24.8112 43.2168 24.8112H67.2168C68.3222 24.8112 69.2168 25.7058 69.2168 26.8112C69.2168 27.9167 68.3224 28.8112 67.2168 28.8112Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_di" x="0" y="0" width="72" height="72" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.106944 0 0 0 0 0.417083 0 0 0 0 0.641667 0 0 0 0.35 0"/>
+<feBlend mode="normal" in2="shape" result="effect2_innerShadow"/>
+</filter>
+<clipPath id="clip0">
+<rect width="64" height="64" fill="white" transform="translate(4)"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,5 +1,15 @@
 #weather-sections-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: stretch;
   min-height: 100vh;
+
+}
+
+#right-side-wrapper {
+  display: flex;
+  justify-content: stretch;
+  width: 100%;
+  @include respons(tablet) {
+    flex-direction: column;
+  }
 }
