@@ -1,5 +1,5 @@
 # CCW19-WeatherApp
-## Mój udział:
+## Mój udział
 Formatowanie daty w pliku 'currenDate.js' oraz 
 style scss w pliku 'main.scss'
 
