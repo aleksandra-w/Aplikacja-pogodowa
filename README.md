@@ -1,6 +1,6 @@
 # CCW19-WeatherApp
 ## Mój udział:
-formatowanie daty w pliku 'currenDate.js'
+Formatowanie daty w pliku 'currenDate.js' oraz 
 style scss w pliku 'main.scss'
 
 ## Konfiguracja webpacka
