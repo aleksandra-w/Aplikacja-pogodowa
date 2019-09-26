@@ -1,4 +1,5 @@
-# CCW19-WeatherApp
+# WeatherApp
+Praca zespołowa w ramach projektu "CodersCamp - otwarty kurs programowania webowego". Zespół skałda się z 8 osób.
 ## Mój udział
 Formatowanie daty w pliku 'currenDate.js' oraz 
 style scss w pliku 'main.scss'
