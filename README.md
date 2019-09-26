@@ -1,4 +1,7 @@
 # CCW19-WeatherApp
+## Mój udział:
+formatowanie daty w pliku 'currenDate.js'
+style scss w pliku 'main.scss'
 
 ## Konfiguracja webpacka
 
@@ -98,4 +101,4 @@ Wszytskie pliki importujemy w `main.scss`, ktory siedzi w głównym katalogu �
 
 **DLACZEGO?** - podkreślnik informuje SCSS, że dany plik jest tylko plikiem częściowym i że nie powinien być generowany w osobnym pliku CSS, tylko zaimportowany do większego pliku. Zapewne w związku z tym że korzytsamy z webpacka, będzie to działać równie dobrze bez podkreslnika, ale warto trzymać się jakiejś konwencji, a to jest równie dobra informacja dla innego programisty, który będzie potem oglądał nasz kod.
 
-PÓŻNIEJ NAPISZE WIĘCEJ.... 😸 wszelkie pomysły i sugestie mile widziane 
+
