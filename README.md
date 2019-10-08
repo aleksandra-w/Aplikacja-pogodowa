@@ -1,5 +1,5 @@
 # WeatherApp
-Praca zespołowa w ramach projektu "CodersCamp - otwarty kurs programowania webowego". Zespół skałdał się z 8 osób.
+Praca zespołowa w ramach projektu "CodersCamp - otwarty kurs programowania webowego". Zespół składał się z 8 osób.
 ## Mój udział
 Formatowanie daty w pliku 'currenDate.js' oraz 
 współudział w stylach scss w pliku 'main.scss'
